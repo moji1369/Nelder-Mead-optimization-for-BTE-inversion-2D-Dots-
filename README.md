@@ -1,4 +1,4 @@
-# Nelder-Mead optimization for BTE inversion (1D-TTG)
+# Nelder-Mead optimization for BTE inversion (2D-Dots)
 The single Al_Si_2D_dots_bkwrd_optim_NM.cpp file uses Nelder-Mead (NM) algorithm to find phonon properties using temperature measurements of the 2D-dots experiment
 by solving the forward problem, the Boltzmann transport equation (BTE), using Monte Carlo (MC) simulations.
 
