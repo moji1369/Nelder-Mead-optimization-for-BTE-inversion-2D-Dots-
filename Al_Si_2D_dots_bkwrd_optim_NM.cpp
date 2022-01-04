@@ -22,7 +22,8 @@ double BTE_bkwrd(double x[]);
 int main ()
 { 
     ofstream result;   //the file that the final optimized parameters will be written to
-    int n={8};         //size of the optimized parameters (12=2*3*2: 2 functions (2 phonon branches), each a piecewise linear functions with 3 lines, where each line is parameterized with 2 parameters
+    int n={8};         //size of the optimized parameters (8=2*3+2: 1 function (same for all branches) with a piecewise linear functions with 3 lines,
+	               //where each line is parameterized with 2 parameters; and another 2 for the line parameterizing the transmissivity
     int maxfun=10000;  //max number of function calculations allowed in the optimization
     int maxiter=10000; //max number of iterations allowed in the optimization
     double tolf=1e-30; //function tolerance
@@ -30,7 +31,7 @@ int main ()
     double x[8]={4.5,11,1.4e13,9.7,5.5e13,11,0.5,0.5};      //initial condition
 
     double IC[n]; 
-    for (int i=0;i<n;++i) {x[i]=x[i]*1.0; IC[i]=x[i];}                                  //initial simplex of NM
+    for (int i=0;i<n;++i) {x[i]=x[i]*1.0; IC[i]=x[i];}      //initial simplex of NM
     
     //NM parameters:
     double rho={1}; 
